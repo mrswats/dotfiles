@@ -6,5 +6,5 @@ flake8-variables-names
 ipdb
 ipython
 pynvim
-pytest==5.3.5
-pytest-xdist==1.32
+pytest
+pytest-xdist

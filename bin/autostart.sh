@@ -4,7 +4,7 @@ DOTFILES=$HOME/.config/dotfiles
 
 # Enable display
 displays () {
-    [ "$(command -v xrandr)" ] && "$DOTFILES/screens/rotated.sh"
+    [ "$(command -v xrandr)" ] && "$DOTFILES/screens/laptop.sh"
 }
 
 # Redshift
@@ -22,17 +22,11 @@ background () {
     [ "$(command -v feh)" ] && feh --bg-fill "$DOTFILES/wallpaper/wallpaper.png"
 }
 
-# ckb-next
-lightning () {
-    [ "$(command -v ckb-next)" ] && ckb-next --background
-}
-
 main () {
     displays
     nightlight
     notify
     background
-    lightning
 }
 
 main

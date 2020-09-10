@@ -7,8 +7,8 @@
 #
 export DOTFILES="$HOME/.config/dotfiles"
 export DEV="$HOME/dev"
-export MAIN_SCREEN="DP-2"
-export SECONDARY_SCREEN="DP-4"
+export MAIN_SCREEN="eDP"
+export EXTERNAL_MONITOR="HDMI-A-0"
 
 export TERM="xterm-256color"
 export TERMINAL="alacritty"

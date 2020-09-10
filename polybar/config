@@ -84,7 +84,7 @@ font-1 = "FontAwesome:size=10;1"
 
 modules-left = i3
 modules-center =
-modules-right = cpu xkeyboard pulseaudio bluetooth wlan eth eth2 date
+modules-right = cpu xkeyboard pulseaudio bluetooth wlan eth battery date
 
 tray-position = none
 
@@ -205,7 +205,7 @@ format-prefix-foreground = ${colors.secondary}
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = wlp1s0
 interval = 1
 
 format-connected = <label-connected>
@@ -220,24 +220,50 @@ label-disconnected-foreground = ${colors.off}
 
 [module/eth]
 type = internal/network
-interface = enp6s0
+interface = enp3s0f0
 interval = 1
 
 label-connected = " %downspeed:9%"
 label-connected-foreground = ${colors.purple}
 
-label-disconnected = "-1"
+label-disconnected = ""
 label-disconnected-foreground = ${colors.off}
 
-[module/eth2]
-type = internal/network
-interface = enp5s0
-interval = 1
+;==========================================================
 
-label-connected = " %downspeed:9%"
-label-connected-foreground = ${colors.frost2}
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 100
 
-label-disconnected = "-2"
-label-disconnected-foreground = ${colors.off}
+format-full = ""
+format-full-foreground = ${colors.green}
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.alert}
+
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+ramp-capacity-foreground = ${colors.foreground}
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+animation-charging-foreground = ${colors.yellow}
+animation-charging-framerate = 1000
+
+animation-discharging-0 = ""
+animation-discharging-1 = ""
+animation-discharging-2 = ""
+animation-discharging-3 = ""
+animation-discharging-4 = ""
+animation-discharging-foreground = ${colors.alert}
+animation-discharging-framerate = 5000
 
 # vi: ft=conf
