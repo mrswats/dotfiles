@@ -1,5 +1,3 @@
-# ZSH Keybindings
-
 bindkey -d
 
 zmodload zsh/complist

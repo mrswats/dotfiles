@@ -1,6 +1,11 @@
 [tool.black]
+<<<<<<< HEAD
 line-length = 120
 target_version = ['py311']
+=======
+line-length = 88
+target_version = ['py310']
+>>>>>>> f33ca06 ([OSX] Changes for OSX)
 skip-string-normalization = false
 include = '\.pyi?$'
 exclude = '''
