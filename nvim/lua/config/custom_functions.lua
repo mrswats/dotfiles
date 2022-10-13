@@ -19,8 +19,8 @@ M.screen_share = function()
     end
 
     local current_size = tonumber(t[2])
-    local big_size = 20.0
-    local small_size = 11.0
+    local big_size = 20
+    local small_size = 15
     if current_size == small_size then
         alacritty_file_contents[size_line_index] = "  size: " .. big_size
         vim.wo.relativenumber = false

@@ -1,14 +1,14 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 GIT_COMMIT_FILE=$1
 
-# Only check for JIRA issue in this folder
-if [[ $PWD =~ $HOME/dev/rp ]]; then
-	DOTFILES_COMMIT_MSG_FORMAT=$(rg '^\[.*?\]\s+.+?$' "$GIT_COMMIT_FILE")
-	test "" != "$DOTFILES_COMMIT_MSG_FORMAT" || {
-		echo >&2 "Wrong commit format for dotfiles :("
-		exit 1
-	}
+if [[ $PWD = $HOME/.config/dotfiles ]]
+then
+    DOTFILES_COMMIT_MSG_FORMAT=$(rg '^\[.*?\]\s+.+?$' "$GIT_COMMIT_FILE")
+    test "" != "$DOTFILES_COMMIT_MSG_FORMAT" || {
+        echo >&2 "Wrong commit format for dotfiles :("
+    exit 1
+    }
 fi
 
 # vim ft=sh

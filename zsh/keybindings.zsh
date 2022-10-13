@@ -1,28 +1,6 @@
-# ZSH Keybindings
-
 bindkey -d
 
 zmodload zsh/complist
-
-forgit-add () {
-    git forgit add
-    zle reset-prompt
-}
-
-forgit-diff () {
-    git forgit diff
-    zle reset-prompt
-}
-
-forgit-log () {
-    git forgit log
-    zle reset-prompt
-}
-
-forgit-switch () {
-    git forgit checkout_branch
-    zle reset-prompt
-}
 
 WIDGETS=(
     forgit::add

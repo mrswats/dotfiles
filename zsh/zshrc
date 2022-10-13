@@ -115,5 +115,5 @@ test -f "$LOCAL_SH" && source "$LOCAL_SH" || true
 
 [[ "$(command -v fzf)" ]] && source <(fzf --zsh)
 [[ "$(command -v starship)" ]] && eval "$(starship init zsh)"
-
+#
 # vi: ft=zsh

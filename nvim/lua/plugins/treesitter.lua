@@ -20,7 +20,7 @@ return {
                 "hyprlang",
                 "javascript",
                 "json",
-                "latex",
+                -- "latex",
                 "lua",
                 "make",
                 "markdown",

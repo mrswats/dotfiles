@@ -1,7 +1,7 @@
 [user]
-    email = ferran@jovell.dev
+    email = ferran.jovell@gmail.com
     name = Ferran Jovell
-    signingkey = FA9B3458F68001AB
+    ; signingkey = FA9B3458F68001AB
 
 [core]
     attributesFile = ~/.config/dotfiles/git/gitattributes
@@ -51,11 +51,8 @@
 [rerere]
 	enabled = true
 
-[gpg]
-	program = gpg2
-
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [format]
     pretty = oneline

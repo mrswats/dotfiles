@@ -1,10 +1,10 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 BRANCH=$(git branch --show-current)
 HT_PATH="$HOME/code/hybrid-theory"
 
 git-modified-files() {
-	git status --porcelain | grep -oP '^M\s+\K.+?$'
+	git status --porcelain | ggrep -oP '^M\s+\K.+?$'
 }
 
 console-log-in-staged-files() {
