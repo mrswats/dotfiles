@@ -109,6 +109,5 @@ setopt no_hist_beep
 
 # share command history data
 setopt share_history
-#
 
 # vi: ft=zsh

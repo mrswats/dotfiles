@@ -4,6 +4,9 @@ Configuration files as well as installation scrip for dependencies.
 
 ## Installation
 
+TODO: This installer works for the linux installation. The Mac OS installation
+is not yet available.
+
 To install the dotfiles and all the dependencies run the following commands:
 
 ```bash
