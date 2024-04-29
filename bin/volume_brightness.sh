@@ -4,6 +4,7 @@
 BAR_COLOR="#B3CFA7"
 VOLUME_STEP=5
 MAX_VOLUME=100
+BRIGHTNESS_STEP=5
 
 function get_volume {
     pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
@@ -11,6 +12,11 @@ function get_volume {
 
 function get_mute {
     pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(sí|no)'
+}
+
+function get_brightness_level {
+    # TODO: ???
+    printf "%.0f\n" "$(xbacklight)"
 }
 
 function get_volume_icon {
@@ -25,6 +31,14 @@ function get_volume_icon {
     fi
 }
 
+function get_brightness_icon {
+    if [ "$1" = "up" ]; then
+        BRIGHTNESS_ICON="🔆"
+    else
+        BRIGHTNESS_ICON="🔅"
+    fi
+}
+
 function show_volume_notif {
     VOLUME=$(get_mute)
     get_volume_icon
@@ -35,6 +49,16 @@ function show_volume_notif {
         -u normal "$VOLUME_ICON $VOLUME%" \
         -h "int:value:$VOLUME" \
         -h "string:hlcolor:$BAR_COLOR"
+}
+
+function show_brightness_notif {
+    LEVEL=$(get_brightness_level)
+    dunstify \
+        -t 1000 \
+        -r 2594 \
+        -u normal "$BRIGHTNESS_ICON" "$LEVEL%" \
+        -h "int:value:$LEVEL" \
+        -h "echoistring:hlcolor:$BAR_COLOR"
 }
 
 case $1 in
@@ -58,5 +82,14 @@ volume_mute)
     pactl set-sink-mute @DEFAULT_SINK@ toggle
     show_volume_notif
     ;;
-
+brightness_up)
+    xbacklight -inc $BRIGHTNESS_STEP
+    get_brightness_icon "up"
+    show_brightness_notif
+    ;;
+brightness_down)
+    xbacklight -dec $BRIGHTNESS_STEP
+    get_brightness_icon "down"
+    show_brightness_notif
+    ;;
 esac

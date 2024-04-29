@@ -83,8 +83,10 @@ bindsym $mod+Shift+$right resize grow width 5 px or 5 ppt
 
 # Media
 bindsym XF86AudioRaiseVolume exec "$DOTFILES/bin/volume_brightness.sh volume_up"
-bindsym XF86AudioLowerVolume exec"$DOTFILES/bin/volume_brightness.sh volume_down"
+bindsym XF86AudioLowerVolume exec "$DOTFILES/bin/volume_brightness.sh volume_down"
 bindsym XF86AudioMute exec "$DOTFILES/bin/volume_brightness.sh volume_mute"
+bindsym XF86MonBrightnessUp exec "$DOTFILES/bin/volume_brightness.sh brightness_up"
+bindsym XF86MonBrightnessDown exec "$DOTFILES/bin/volume_brightness.sh brightness_down"
 bindsym XF86AudioStop exec "playerctl stop"
 bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioPlay exec "playerctl play-pause"
