@@ -8,22 +8,22 @@ zmodload zsh/complist
 test -e /etc/fedora-release && source /usr/share/fzf/shell/key-bindings.zsh
 
 forgit-add () {
-    forgit::add &>/dev/null
+    git forgit add
     zle reset-prompt
 }
 
 forgit-diff () {
-    forgit::diff
+    git forgit diff
     zle reset-prompt
 }
 
 forgit-log () {
-    forgit::log
+    git forgit log
     zle reset-prompt
 }
 
 forgit-switch () {
-    forgit::checkout::branch
+    git forigt checkout_branch
     zle reset-prompt
 }
 
