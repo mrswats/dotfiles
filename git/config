@@ -13,6 +13,7 @@
     branch-name = "branch --show-current"
     branches = "for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes"
     down = "pull --rebase --prune"
+    fixup = "commit -m 'fixup' --fixup HEAD"
     last = "log -1 --stat --show-signature --pretty=full"
     lob = "!git lol develop..$(git rev-parse --abbrev-ref HEAD)"
     lol = "log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
