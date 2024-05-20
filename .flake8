@@ -1,1 +1,4 @@
-python/flake8
+[flake8]
+max-line-length = 99
+exclude = .git
+ignore = H304,W503
