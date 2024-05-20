@@ -66,7 +66,6 @@ format="""\
 [kubernetes]
   format = '[$symbol ctx:$context|ns:$namespace]($style) '
   symbol = '󱃾 '
-  disabled = false
   detect_files = ["Chart.yaml", "values.yaml"]
   contexts = [
     { context_pattern = "dev-izi-compute-cluster", style="green", context_alias = "dev"},
