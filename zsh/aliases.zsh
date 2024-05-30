@@ -62,7 +62,9 @@ if [ "$(command -v kubectl)" ]; then
     alias ks='kubectl describe'
     alias krr='kubectl rollout restart'
     alias krs='kubectl rollout status'
-    alias kw='k9s'
+    alias kwd='k9s --context dev-izi-compute-cluster'
+    alias kws='k9s --context staging-izi-compute-cluster'
+    alias kwp='k9s --context prod-izi-compute-cluster'
 fi
 
 alias local-ip='python -c "import socket; print(socket.gethostbyname(socket.gethostname()))"'

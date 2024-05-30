@@ -4,6 +4,7 @@
     - ~/.config/nvim/
     - ~/.config/git/
     - ~/.config/i3/
+    - ~/.config/k9s
     - ~/.local/share/antigen/
     - ~/.local/share/fonts/comic/
     - ~/.local/share/fonts/inconsolata/
@@ -13,10 +14,10 @@
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.wezterm.lua: wezterm/wezterm.lua
-    ~/.config/flake8-black: python/black-config.toml
     ~/.config/git/config: git/config
     ~/.config/nvim/init.lua: nvim/init.lua
     ~/.config/nvim/lua/: nvim/lua/
+    ~/.config/k9s/views.yaml: k9s/views.yaml
     ~/.config/i3/config:
       if: "[ $(uname) = Linux ]"
       path: i3/config
