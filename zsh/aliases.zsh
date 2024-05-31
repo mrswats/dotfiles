@@ -139,6 +139,7 @@ alias pa='clear; python3 -m pytest --color yes --durations=10 -qk ""'
 alias pap='pa -n 4'
 alias pdj='pap --cov --cov-report term-missing'
 alias pdjc='pap --dov --cov-report html'
+alias pc="pa \$(git diff --name-only 'tests/test_*.py')"
 
 alias mkv='virtualenv .venv && source ./.venv/bin/activate'
 alias rmv='deactivate && rm -rf .venv'
