@@ -22,6 +22,9 @@
     publish = "push -u origin HEAD -f"
     wip = "commit -am '[skip-ci] WIP' --no-verify"
 
+[init]
+	defaultBranch = main
+
 [delta]
     dark = true
     line-numbers = true
