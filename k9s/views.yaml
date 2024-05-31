@@ -1,7 +1,7 @@
 ---
 views:
   v1/pods:
-    sortColumn: NAME:asc
+    sortColumn: NAME:desc
     columns:
       - NAME
       - PF
