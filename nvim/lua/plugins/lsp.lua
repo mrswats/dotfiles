@@ -38,6 +38,8 @@ local function setup()
 
     lspconfig.pylsp.setup({ on_attach = on_attach })
     lspconfig.tailwindcss.setup({ on_attach = on_attach })
+    lspconfig.tsserver.setup({ on_attach = on_attach })
+    lspconfig.cssls.setup({ on_attach = on_attach })
 end
 
 return {
