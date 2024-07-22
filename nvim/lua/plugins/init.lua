@@ -17,6 +17,7 @@ return {
     },
     {
         "HiPhish/rainbow-delimiters.nvim",
+        event = "BufRead",
     },
     {
         "Almo7aya/openingh.nvim",
