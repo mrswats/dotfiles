@@ -52,11 +52,6 @@ function pyclean() {
     find . -regex '^.*\(__pycache__\|\.py[co]\)$' -delete
 }
 
-function install-poetry-project() {
-    pip install poetry
-    poetry install
-}
-
 function install-sugar {
     pip install pytest-sugar pytest-xdist ipdb
 }
