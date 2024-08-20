@@ -90,3 +90,13 @@ function git-jira() {
     git branch "feature/$FULL_BRANCH_NAME"
     git switch "feature/$FULL_BRANCH_NAME"
 }
+
+function update-all-repos() {
+    for repo in $(ls); do
+        if [ -d $repo ]; then
+            echo "$repo"
+            git -C $repo pull -q &> /dev/null
+        fi
+    done
+    return 0
+}
