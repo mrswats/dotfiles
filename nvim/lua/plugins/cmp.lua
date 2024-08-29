@@ -3,6 +3,10 @@ local function setup()
     local lspkind = require("lspkind")
 
     cmp.setup({
+        performance = {
+            debounce = 0,
+            throttle = 0,
+        },
         view = {
             entries = {
                 name = "custom",
