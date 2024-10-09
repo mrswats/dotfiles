@@ -17,6 +17,8 @@ alias mkdir='mkdir -pv'
 
 alias -s html="\$BROWSER"
 
+alias ifconfig="echo 'deprecated. Use ip addr show instead.'"
+
 [ "$(command -v bat)" ] && alias cat='bat'
 [ "$(command -v ggrep)" ] && alias grep='ggrep'
 [ "$(command -v awshelp)" ] && alias aws=awshelp
