@@ -52,6 +52,8 @@ if [ "$(command -v dnf)" ]; then
 fi
 
 alias tf=terraform
+alias tfp='terraform plan -out plan.out'
+alias tfa='terraform apply "plan.out"'
 
 if [ "$(command -v kubectl)" ]; then
     alias kn='kubectl ns'
