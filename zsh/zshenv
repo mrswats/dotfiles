@@ -22,6 +22,7 @@ export LOCAL_SH="$HOME/.local/local.sh"
 
 export PYTHONBREAKPOINT="ipdb.set_trace"
 export PIP_REQUIRE_VIRTUALENV=true
+export PIP_DISABLE_PIP_VERSION_CHECK=1
 export PYTHONSTARTUP="$DOTFILES/python/pythonstartup.py"
 export PYTHONDONTWRITEBYTECODE=1
 
