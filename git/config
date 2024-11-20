@@ -48,9 +48,6 @@
 [branch]
 	sort = -committerdate
 
-[blame]
-	ignoreRevsFile = .git-blame-ignore-revs
-
 [rerere]
 	enabled = true
 
