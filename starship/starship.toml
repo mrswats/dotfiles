@@ -70,9 +70,9 @@ format="""\
   detect_files = ["Chart.yaml",]
   detect_env_vars = ["INVALID"]
   contexts = [
-    { context_pattern = "dev-izi-compute-cluster", style="green", context_alias = "dev"},
-    { context_pattern = "staging-izi-compute-cluster", style="yellow", context_alias = "staging"},
-    { context_pattern = "prod-izi-compute-cluster", style="red", context_alias = "prod"},
+    { context_pattern = ".*dev-izi-cluster", style="green", context_alias = "dev"},
+    { context_pattern = ".*staging-izi-cluster", style="yellow", context_alias = "staging"},
+    { context_pattern = ".*prod-izi-cluster", style="red", context_alias = "prod"},
   ]
 
 [character]
