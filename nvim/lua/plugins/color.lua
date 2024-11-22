@@ -8,6 +8,6 @@ return {
                 colors.comment = "#9aa5ce"
             end,
         })
-        vim.cmd([[colorscheme tokyonight-night]])
+        vim.cmd([[colorscheme tokyonight-storm]])
     end,
 }
