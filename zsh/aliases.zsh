@@ -53,7 +53,8 @@ fi
 
 alias tf=terraform
 alias tfp='terraform plan -out plan.out'
-alias tfa='terraform apply "plan.out"'
+alias tfa='terraform apply "plan.out" && rm "plan.out"'
+alias tfa!='tfp && tfa'
 alias tff='terraform fmt .'
 
 if [ "$(command -v kubectl)" ]; then
