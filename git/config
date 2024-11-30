@@ -84,4 +84,4 @@
 [interactive]
     diffFilter = delta --color-only
 
-# vi: ft=conf
+# vi: ft=gitconfig
