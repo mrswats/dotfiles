@@ -109,7 +109,7 @@ font pango:comicmono-14 10
 
 # Displays
 set $MAIN_SCREEN "DP-2"
-set $SECONDARY_SCREEN "DP-3"
+set $SECONDARY_SCREEN "DP-4"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.

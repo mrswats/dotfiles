@@ -7,7 +7,7 @@
 export DOTFILES="$HOME/.config/dotfiles"
 export DEV="$HOME/code"
 export MAIN_SCREEN="DP-2"
-export SECONDARY_SCREEN="DP-3"
+export SECONDARY_SCREEN="DP-4"
 
 export EDITOR="nvim"
 export PAGER="less -RF"

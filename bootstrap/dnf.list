@@ -7,6 +7,7 @@ git
 git-extras
 jq
 nodejs
+playerctl
 polybar
 redshift
 rofi
@@ -14,4 +15,5 @@ shellcheck
 shfmt
 thunar
 tmux
+xbacklight
 zsh
