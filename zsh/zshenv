@@ -16,8 +16,7 @@ export BROWSER="firefox"
 export FILE="nautilus"
 export HISTFILE="$HOME/.local/zsh_history"
 
-export ADOTDIR="$HOME/.local/share/antigen"
-export ANTIGEN_BUNDLES="$HOME/.local/share/bundles"
+export ZPM_DIR="$HOME/.local/share/zpm/"
 export LOCAL_SH="$HOME/.local/local.sh"
 
 export PYTHONBREAKPOINT="ipdb.set_trace"
@@ -35,12 +34,12 @@ export BAT_CONFIG_PATH="$DOTFILES/bat/config"
 export RIPGREP_CONFIG_PATH="$DOTFILES/ripgrep/config"
 export DOCKER_BUILDKIT=1
 export FLYCTL_INSTALL="$HOME/.fly"
+export SDKMAN_DIR="$HOME/.sdkman"
 
 export NVIM_CONFIG="$DOTFILES/nvim"
 export NVIM_PLUGINS_CONFIG="$NVIM_CONFIG/plugins"
 
 export FORGIT_NO_ALIASES='nopls'
-export FORGIT_INSTALL_DIR="$ANTIGEN_BUNDLES/wfxr/forgit"
 export FORGIT_ADD_FZF_OPTS='--header="Add files"'
 export FORGIT_DIFF_FZF_OPTS='--header="Git Diff"'
 export FORGIT_LOG_FZF_OPTS='--header="Git Log"'

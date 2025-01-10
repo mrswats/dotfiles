@@ -1,5 +1,3 @@
-alias please='sudo'
-alias prettyplease='sudo !!'
 alias less='less -r'
 alias untar='tar xvfz'
 alias c='clear'
@@ -8,12 +6,15 @@ alias cd-='cd -'
 alias e="\$EDITOR --noplugins"
 alias v="\$EDITOR"
 alias vim="\$EDITOR"
-alias m=make
 alias open='xdg-open'
 
 alias mv='mv -v'
 alias cp='cp -v'
 alias mkdir='mkdir -pv'
+
+alias -g ..='cd ..'
+alias -g ...="cd ../../"
+alias -g ....="cd ../../../"
 
 alias -s html="\$BROWSER"
 

@@ -20,9 +20,13 @@ BIN_PATH=(
 
 F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
 
-if [[ -d "$ADOTDIR" ]] && [[ ! "$(command -v antigen)" ]]; then
-	source "$ADOTDIR/antigen.zsh"
-	antigen init "$DOTFILES/zsh/antigenrc"
+if [[ -d "$ZPM_DIR" ]]; then
+	source "$ZPM_DIR/zpm.zsh"
+    zpm load \
+        rupa/z,source:/z.sh \
+        wfxr/forgit \
+        zdharma-continuum/fast-syntax-highlighting \
+        zsh-users/zsh-autosuggestions
 fi
 
 for new_path in "${BIN_PATH[@]}"; do
@@ -35,11 +39,13 @@ done
 
 unset LOCAL_SHARE LOCAL_BIN
 
+test -f "$DOTFILES/zsh/style.zsh" && source "$DOTFILES/zsh/style.zsh"
 test -f "$DOTFILES/zsh/aliases.zsh" && source "$DOTFILES/zsh/aliases.zsh"
 test -f "$DOTFILES/zsh/custom_functions.zsh" && source "$DOTFILES/zsh/custom_functions.zsh"
 test -f "$DOTFILES/zsh/fzf.zsh" && source "$DOTFILES/zsh/fzf.zsh"
 test -f "$DOTFILES/zsh/history.zsh" && source "$DOTFILES/zsh/history.zsh"
 test -f "$DOTFILES/zsh/keybindings.zsh" && source "$DOTFILES/zsh/keybindings.zsh"
+test -f "$HOME/.sdkman/bin/sdkman-init.sh" && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 test -f "$LOCAL_SH" && source "$LOCAL_SH" || true
 

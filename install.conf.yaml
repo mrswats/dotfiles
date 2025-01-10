@@ -5,7 +5,7 @@
     - ~/.config/git/
     - ~/.config/i3/
     - ~/.config/k9s
-    - ~/.local/share/antigen/
+    - ~/.local/share/zpm/
     - ~/.local/share/fonts/comic/
     - ~/.local/share/fonts/inconsolata/
 
@@ -76,7 +76,7 @@
         fi
     - command: |
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-        curl -sL git.io/antigen > ~/.local/share/antigen/antigen.zsh
+        git clone --recursive https://github.com/zpm-zsh/zpm ~/.local/share/zpm
     - command: |
         curl -sL -o ComicMono.ttf https://dtinth.github.io/comic-mono-font/ComicMono.ttf
         curl -sL -o ComicMono-Bold.ttf https://dtinth.github.io/comic-mono-font/ComicMono-Bold.ttf
