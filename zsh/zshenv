@@ -15,6 +15,7 @@ export MANPAGER='nvim +Man!'
 export BROWSER="firefox"
 export FILE="nautilus"
 export HISTFILE="$HOME/.local/zsh_history"
+export ZSH_TMP_DIR="$HOME/.tmp/zsh"
 
 export ZPM_DIR="$HOME/.local/share/zpm/"
 export LOCAL_SH="$HOME/.local/local.sh"
