@@ -23,12 +23,11 @@ forgit-log () {
 }
 
 forgit-switch () {
-    git forigt checkout_branch
+    git forgit checkout_branch
     zle reset-prompt
 }
 
 WIDGETS=(
-    edit-command-line
     forgit-add
     forgit-diff
     forgit-log
@@ -57,4 +56,3 @@ bindkey '^E' end-of-line
 bindkey '^N' down-history
 bindkey '^O' accept-line
 bindkey '^P' up-history
-bindkey '^X^E' edit-command-line
