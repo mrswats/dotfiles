@@ -1,13 +1,11 @@
 return {
-    "folke/tokyonight.nvim",
-    lazy = false,
+    "navarasu/onedark.nvim",
     priority = 1000,
+    lazy = false,
     config = function()
-        require("tokyonight").setup({
-            on_colors = function(colors)
-                colors.comment = "#9aa5ce"
-            end,
+        require("onedark").setup({
+            style = "deep",
         })
-        vim.cmd([[colorscheme tokyonight-storm]])
+        require("onedark").load()
     end,
 }
