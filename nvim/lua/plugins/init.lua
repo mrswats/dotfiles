@@ -12,14 +12,6 @@ return {
         event = "BufRead",
     },
     {
-        "kevinhwang91/nvim-bqf",
-        ft = "qf",
-    },
-    {
-        "HiPhish/rainbow-delimiters.nvim",
-        event = "BufRead",
-    },
-    {
         "Almo7aya/openingh.nvim",
         cmd = { "OpenInGHFile", "OpenInGHRepo" },
     },
@@ -32,10 +24,6 @@ return {
         ft = { "markdown" },
         build = "cd app && yarn install",
         cmd = "MarkdownPreview",
-    },
-    {
-        "eandrju/cellular-automaton.nvim",
-        cmd = { "CellularAutomaton" },
     },
     {
         "akinsho/git-conflict.nvim",
