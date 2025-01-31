@@ -45,14 +45,4 @@ return {
             default_commands = false,
         },
     },
-    {
-        "rcarriga/nvim-notify",
-        config = function()
-            require("notify").setup({
-                render = "wrapped-compact",
-                stages = "static",
-            })
-            vim.notify = require("notify")
-        end,
-    },
 }
