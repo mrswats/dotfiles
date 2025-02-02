@@ -16,6 +16,7 @@ BIN_PATH=(
     "$HOME/.luarocks/bin"
     "$FORGIT_INSTALL_DIR/bin"
     "$FLYCTL_INSTALL/bin"
+    "$TEXLIVE_INSTALL"
 )
 
 F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")

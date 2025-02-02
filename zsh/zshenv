@@ -36,6 +36,7 @@ export RIPGREP_CONFIG_PATH="$DOTFILES/ripgrep/config"
 export DOCKER_BUILDKIT=1
 export FLYCTL_INSTALL="$HOME/.fly"
 export SDKMAN_DIR="$HOME/.sdkman"
+export TEXLIVE_INSTALL="/usr/local/texlive/2024/bin/x86_64-linux/"
 
 export NVIM_CONFIG="$DOTFILES/nvim"
 export NVIM_PLUGINS_CONFIG="$NVIM_CONFIG/plugins"
