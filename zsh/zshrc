@@ -23,6 +23,12 @@ F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
 
 if [[ -d "$ZPM_DIR" ]]; then
 	source "$ZPM_DIR/zpm.zsh"
+    zpm load @omz
+
+    zpm load \
+        @omz/lib/compfix \
+        @omz/lib/completion
+
     zpm load \
         rupa/z,source:/z.sh \
         wfxr/forgit \
