@@ -17,6 +17,7 @@ BIN_PATH=(
     "$FORGIT_INSTALL_DIR/bin"
     "$FLYCTL_INSTALL/bin"
     "$TEXLIVE_INSTALL"
+    "$BUN_INSTALL/bin"
 )
 
 F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
@@ -53,6 +54,8 @@ test -f "$DOTFILES/zsh/fzf.zsh" && source "$DOTFILES/zsh/fzf.zsh"
 test -f "$DOTFILES/zsh/history.zsh" && source "$DOTFILES/zsh/history.zsh"
 test -f "$DOTFILES/zsh/keybindings.zsh" && source "$DOTFILES/zsh/keybindings.zsh"
 test -f "$HOME/.sdkman/bin/sdkman-init.sh" && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 test -f "$LOCAL_SH" && source "$LOCAL_SH" || true
 
