@@ -7,6 +7,7 @@
     - ~/.config/k9s
     - ~/.local/share/zpm/
     - ~/.local/share/fonts/comic/
+    - ~/.local/share/fonts/hack/
     - ~/.local/share/fonts/inconsolata/
 
 - link:
@@ -86,5 +87,9 @@
         unzip InconsolataLGC.zip
         mv *.ttf ~/.local/share/fonts/inconsolata/
         rm InconsolataLGC.zip readme.md
+
+        curl -sSL -o hack.zip https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+        unzip hack.zip
+        mv ttf/*.ttf ~/.local/share/fonts/hack/
 
         fc-cache -v
