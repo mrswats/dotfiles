@@ -79,6 +79,8 @@ fi
 
 alias local-ip='python -c "import socket; print(socket.gethostbyname(socket.gethostname()))"'
 
+alias android-studio='$HOME/Baixades/android-studio/bin/studio'
+
 alias gst='git status'
 alias gc='git commit -v'
 alias gcnv='git commit -v --no-verify'
