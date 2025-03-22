@@ -84,4 +84,7 @@
 [interactive]
     diffFilter = delta --color-only
 
+[log]
+    follow = true
+
 # vi: ft=gitconfig
