@@ -18,6 +18,7 @@ BIN_PATH=(
     "$FLYCTL_INSTALL/bin"
     "$TEXLIVE_INSTALL"
     "$BUN_INSTALL/bin"
+    "$HOME/.maestro/bin"
 )
 
 F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
