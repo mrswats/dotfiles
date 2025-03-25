@@ -86,6 +86,12 @@ function git-jira() {
     git switch "feature/$FULL_BRANCH_NAME"
 }
 
+alias hl='rg -N --passthru'
+
+function field() {
+	awk -F "${2:- }" "{ print \$${1:-1} }"
+}
+
 function update-all-repos() {
     for repo in $(ls); do
         if [ -d $repo ]; then
