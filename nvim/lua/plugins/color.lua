@@ -1,11 +1,9 @@
 return {
-    "navarasu/onedark.nvim",
+    "metalelf0/black-metal-theme-neovim",
     priority = 1000,
     lazy = false,
     config = function()
-        require("onedark").setup({
-            style = "deep",
-        })
-        require("onedark").load()
+        require("black-metal").setup()
+        vim.cmd("colorscheme emperor")
     end,
 }
