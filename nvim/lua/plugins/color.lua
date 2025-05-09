@@ -3,7 +3,11 @@ return {
     priority = 1000,
     lazy = false,
     config = function()
-        require("black-metal").setup()
-        vim.cmd("colorscheme emperor")
+        require("black-metal").setup({
+            theme = "emperor",
+            alt_bg = true,
+            favor_treesitter_hl = true,
+        })
+        require("black-metal").load()
     end,
 }
