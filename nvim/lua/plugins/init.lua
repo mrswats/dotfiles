@@ -104,4 +104,7 @@ return {
             require("nvim-highlight-colors").setup({})
         end,
     },
+    {
+        "webhooked/kanso.nvim",
+    },
 }
