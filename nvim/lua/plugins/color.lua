@@ -8,6 +8,6 @@ return {
             alt_bg = true,
             favor_treesitter_hl = true,
         })
-        require("black-metal").load()
+        vim.cmd("colorscheme kanso")
     end,
 }
