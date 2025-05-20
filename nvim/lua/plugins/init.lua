@@ -107,4 +107,8 @@ return {
     {
         "webhooked/kanso.nvim",
     },
+    {
+        "kevinhwang91/nvim-bqf",
+        ft = "qf",
+    },
 }
