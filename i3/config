@@ -93,6 +93,7 @@ for_window [class="feh"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="TelegramDesktop"] floating enable
+for_window [class="Emulator"] floating enable
 
 # Window decoration
 client.background #414868
