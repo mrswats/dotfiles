@@ -43,11 +43,11 @@ bindsym $mod+control+r reload
 bindsym $mod+control+Shift+r restart
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+control+u layout toggle split
-bindsym $mod+control+i layout stacking
-bindsym $mod+control+o layout tabbed
-bindsym $mod+control+Shift+i split v
-bindsym $mod+control+Shift+o split h
+bindsym $mod+z layout toggle split
+bindsym $mod+x layout stacking
+bindsym $mod+c layout tabbed
+bindsym $mod+v split v
+bindsym $mod+b split h
 
 # toggle tiling / floating
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -84,7 +84,6 @@ bindsym XF86AudioPrev exec "playerctl previous"
 bindsym XF86AudioPlay exec "playerctl play-pause"
 bindsym XF86AudioNext exec "playerctl next"
 
-
 # Do not wrap on focus
 focus_wrapping no
 
@@ -95,18 +94,11 @@ for_window [class="Pavucontrol"] floating enable
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="Emulator"] floating enable
 
-# Window decoration
-client.background #414868
-# class                  border  backgr  text    indicator child_border
-client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
-client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
-client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
-
 hide_edge_borders smart
 for_window [class="^.*"] border pixel 2
 
 # Font for window titles.
-font pango:comicmono-14 10
+font pango:comicmono-14 8
 
 # Displays
 set $MAIN_SCREEN "DP-2"
