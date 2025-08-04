@@ -35,6 +35,7 @@ bindsym $mod+control+shift+d exec dmenu_run -fn 'comicmono-14'
 bindsym $mod+control+shift+p exec --no-startup-id arandr
 bindsym $mod+control+q exec --no-startup-id "$DOTFILES/bin/lock.sh"
 bindsym $mod+control+Shift+q exec --no-startup-id "$DOTFILES/bin/powermenu.sh"
+bindsym $mod+control+p exec --no-startup-id flameshot gui
 
 # System
 bindsym $mod+control+w kill
