@@ -16,6 +16,7 @@ exec_always --no-startup-id "$DOTFILES/bin/autostart_always.sh"
 set $DOTFILES $HOME/.config/dotfiles
 set $TERMINAL wezterm
 set $BROWSER firefox
+set $ALT_BROWSER chromium-browser
 
 # Super key
 set $mod Mod4
@@ -27,6 +28,7 @@ set $right l
 # Apps
 bindsym $mod+Return "exec --no-startup-id $TERMINAL"
 bindsym $mod+BackSpace "exec --no-startup-id $BROWSER"
+bindsym $mod+shift+BackSpace "exec --no-startup-id $ALT_BROWSER"
 
 # Management
 # bindsym $mod+space exec
