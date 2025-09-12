@@ -98,10 +98,10 @@ for_window [class="TelegramDesktop"] floating enable
 for_window [class="Emulator"] floating enable
 
 hide_edge_borders smart
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 6
 
 # Font for window titles.
-font pango:comicmono-14 8
+font pango:comicmono-14 12
 
 # Displays
 set $MAIN_SCREEN "DP-2"
