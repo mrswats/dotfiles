@@ -9,6 +9,9 @@
     - ~/.local/share/fonts/comic/
     - ~/.local/share/fonts/hack/
     - ~/.local/share/fonts/inconsolata/
+    - ~/.config/hypr/
+    - ~/.config/waybar/
+    - ~/.config/dunst
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
@@ -19,6 +22,10 @@
     ~/.config/nvim/init.lua: nvim/init.lua
     ~/.config/nvim/lua/: nvim/lua/
     ~/.config/k9s/views.yaml: k9s/views.yaml
+    ~/.config/hypr/hyprland.conf: hypr/hyprland.conf
+    ~/.config/hypr/hyprlock.conf: hypr/hyprlock.conf
+    ~/.config/waybar/config: waybar/config
+    ~/.config/dunst/dunstrc: dunst/dunstrc
     ~/.config/i3/config:
       if: "[ $(uname) = Linux ]"
       path: i3/config
