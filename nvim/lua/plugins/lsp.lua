@@ -1,20 +1,4 @@
-local function on_attach(_client, bufnr)
-    local opts = { noremap = true, silent = true, buffer = bufnr }
-    local set_keymap = vim.keymap.set
-
-    vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-    set_keymap("n", "gd", vim.lsp.buf.definition, opts)
-    set_keymap("n", "gr", vim.lsp.buf.rename, opts)
-    set_keymap("n", "gR", vim.lsp.buf.references, opts)
-    set_keymap("n", "gq", vim.lsp.buf.format, opts)
-    set_keymap("n", "K", vim.lsp.buf.hover, opts)
-    set_keymap("n", "gl", vim.diagnostic.setloclist, opts)
-end
-
 local function setup()
-    local lspconfig = require("lspconfig")
-
     vim.diagnostic.config({ virtual_text = false })
     -- Set up border for floating preview windows
     -- source: https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
@@ -36,12 +20,28 @@ local function setup()
         return orig_util_open_floating_preview(contents, syntax, opts, ...)
     end
 
-    lspconfig.pylsp.setup({ on_attach = on_attach })
-    lspconfig.djlsp.setup({ on_attach = on_attach })
-    lspconfig.tailwindcss.setup({ on_attach = on_attach })
-    lspconfig.ts_ls.setup({ on_attach = on_attach })
-    lspconfig.html.setup({ on_attach = on_attach })
-    lspconfig.cssls.setup({ on_attach = on_attach })
+    vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(event)
+            local opts = { noremap = true, silent = true, buffer = event.buf }
+            local set_keymap = vim.keymap.set
+
+            vim.api.nvim_buf_set_option(event.buf, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+            set_keymap("n", "gd", vim.lsp.buf.definition, opts)
+            set_keymap("n", "gr", vim.lsp.buf.rename, opts)
+            set_keymap("n", "gR", vim.lsp.buf.references, opts)
+            set_keymap("n", "gq", vim.lsp.buf.format, opts)
+            set_keymap("n", "K", vim.lsp.buf.hover, opts)
+            set_keymap("n", "gl", vim.diagnostic.setloclist, opts)
+        end,
+    })
+
+    vim.lsp.enable("pylsp")
+    vim.lsp.enable("djlsp")
+    vim.lsp.enable("tailwindcss")
+    vim.lsp.enable("ts_ls")
+    vim.lsp.enable("html")
+    vim.lsp.enable("cssls")
 end
 
 return {
