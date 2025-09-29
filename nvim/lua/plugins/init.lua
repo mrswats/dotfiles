@@ -94,9 +94,9 @@ return {
         },
     },
     {
-        "m4xshen/autoclose.nvim",
-        opts = {},
-        event = "BufRead",
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true,
     },
     {
         "brenoprata10/nvim-highlight-colors",
