@@ -12,6 +12,7 @@ local function setup()
             "hcl",
             "html",
             "htmldjango",
+            "hyprlang",
             "javascript",
             "json",
             "latex",
