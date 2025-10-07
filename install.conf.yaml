@@ -26,6 +26,7 @@
     ~/.config/hypr/hyprlock.conf: hypr/hyprlock.conf
     ~/.config/hypr/hyprpaper.conf: hypr/hyprpaper.conf
     ~/.config/waybar/config: waybar/config
+    ~/.config/waybar/style.css: waybar/style.css
     ~/.config/dunst/dunstrc: dunst/dunstrc
     ~/.config/i3/config:
       if: "[ $(uname) = Linux ]"
