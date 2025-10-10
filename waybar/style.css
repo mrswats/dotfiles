@@ -32,11 +32,11 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    background-color: #565f89;
+    color: #565f89;
 }
 
 #workspaces button.urgent {
-    background-color: #f7768e;
+    color: #f7768e;
 }
 
 #workspaces .active {
