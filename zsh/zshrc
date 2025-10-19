@@ -23,19 +23,18 @@ BIN_PATH=(
 
 F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
 
-if [[ -d "$ZPM_DIR" ]]; then
-	source "$ZPM_DIR/zpm.zsh"
-    zpm load @omz
 
-    zpm load \
-        @omz/lib/compfix \
-        @omz/lib/completion
+if [[ -d "$ZPLUG_HOME" ]]; then
+    source $ZPLUG_HOME/init.zsh
 
-    zpm load \
-        rupa/z,source:/z.sh \
-        wfxr/forgit \
-        zdharma-continuum/fast-syntax-highlighting \
-        zsh-users/zsh-autosuggestions
+    zplug "lib/compfix", from:oh-my-zsh
+    zplug "lib/completion", from:oh-my-zsh
+    zplug "rupa/z", use:z.sh, defer:2
+    zplug "wfxr/forgit", defer:2
+    zplug "zdharma-continuum/fast-syntax-highlighting"
+    zplug "zsh-users/zsh-autosuggestions"
+
+    zplug load
 fi
 
 for new_path in "${BIN_PATH[@]}"; do

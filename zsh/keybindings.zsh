@@ -28,10 +28,10 @@ forgit-switch () {
 }
 
 WIDGETS=(
-    forgit-add
-    forgit-diff
-    forgit-log
-    forgit-switch
+    forgit::add
+    forgit::diff
+    forgit::log
+    forgit::checkout::branch
     fzf-cd-to-dir
     fzf-new-window-choose-dir
     fzf-open-file-from-contents
@@ -45,10 +45,10 @@ bindkey "^G^E" fzf-open-file-in-editor
 bindkey "^G^O" fzf-cd-to-dir
 bindkey "^G^P" fzf-new-window-choose-dir
 bindkey "^G^S" fzf-open-file-from-contents
-bindkey "^G^Y" forgit-add
-bindkey "^G^U" forgit-diff
-bindkey "^G^I" forgit-log
-bindkey "^G^G" forgit-switch
+bindkey "^G^Y" forgit::add
+bindkey "^G^U" forgit::diff
+bindkey "^G^I" forgit::log
+bindkey "^G^G" forgit::checkout::branch
 
 bindkey '^ ' autosuggest-accept
 bindkey '^A' beginning-of-line

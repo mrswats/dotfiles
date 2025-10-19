@@ -18,6 +18,7 @@ export HISTFILE="$HOME/.local/zsh_history"
 export ZSH_TMP_DIR="$HOME/.tmp/zsh"
 
 export ZPM_DIR="$HOME/.local/share/zpm/"
+export ZPLUG_HOME="$HOME/.zplug/"
 export LOCAL_SH="$HOME/.local/local.sh"
 
 export PYTHONBREAKPOINT="ipdb.set_trace"
