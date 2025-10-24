@@ -44,6 +44,10 @@ export BUN_INSTALL="$HOME/.bun"
 export NVIM_CONFIG="$DOTFILES/nvim"
 export NVIM_PLUGINS_CONFIG="$NVIM_CONFIG/plugins"
 
+export FZF_DEFAULT_COMMAND='fd'
+export FZF_DEFAULT_OPTS="--ansi --reverse --border --height 80% --exact --preview-window=right:50%"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export FORGIT_NO_ALIASES='nopls'
 export FORGIT_ADD_FZF_OPTS='--header="Add files"'
 export FORGIT_DIFF_FZF_OPTS='--header="Git Diff"'

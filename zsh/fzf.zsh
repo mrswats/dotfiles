@@ -1,31 +1,3 @@
-# Settings and functions for FZF
-
-# Setting fd as the default source for fzf
-export FZF_DEFAULT_COMMAND='fd'
-
-# Default options for all fzf calls
-export FZF_DEFAULT_OPTS="--ansi --reverse --border --height 80% --exact --preview-window=right:50%"
-
-# To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# source: https://junegunn.kr/2016/07/fzf-git/
-is-in-git-repo() {
-    git rev-parse --is-inside-work-tree &>/dev/null
-}
-
-gr() {
-    is-in-git-repo || return
-    git restore $(
-        git ls-files --modified |
-            fzf \
-                --header "Select a file" \
-                -m \
-                --preview 'git diff {+1} | delta'
-    )
-}
-
-
 fzf-choose-dir() {
     TARGET_DIR=$(
         z | awk '{print $2}' |
