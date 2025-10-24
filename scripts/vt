@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+function vt() {
+    local FILENAME
+    FILENAME=${1:-"t.py"}
+
+    cp -p $DOTFILES/templates/t.py "$FILENAME"
+    "$EDITOR" "$FILENAME"
+}
+
+vt "$@"

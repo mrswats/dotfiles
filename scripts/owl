@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+main () {
+    echo
+    echo "{o,o}"
+    echo "./)_)"
+    echo '  ""'
+    echo
+}
+
+main "$@"

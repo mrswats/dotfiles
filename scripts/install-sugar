@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+function install-sugar {
+    .venv/bin/pip install pytest-sugar pytest-xdist ipdb
+}
+
+install-sugar "$@"

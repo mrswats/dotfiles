@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    echo 'deprecated. Use ip addr show instead.'
+}
+
+main "$@"

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    if [ $(uname -s) == "Darwin" ]; then
+        exec open "$@"
+    else
+        exec xdg-open "$@"
+    fi
+}
+
+main "$@"

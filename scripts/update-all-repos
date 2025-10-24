@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+main () {
+    for repo in $(ls); do
+        if [ -d $repo ]; then
+            echo "$repo"
+            git -C $repo pull -q &> /dev/null
+        fi
+    done
+    return 0
+}
+
+main "$@"

@@ -4,9 +4,6 @@ bindkey -d
 
 zmodload zsh/complist
 
-# FZF key-bindings for fedora
-test -e /etc/fedora-release && source /usr/share/fzf/shell/key-bindings.zsh
-
 forgit-add () {
     git forgit add
     zle reset-prompt

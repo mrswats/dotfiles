@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    pap --cov --cov-report term-missing "$@"
+}
+
+main "$@"

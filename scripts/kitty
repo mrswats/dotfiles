@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+main () {
+    echo ""
+    echo '  /\___/\'
+    echo " ( o   o )"
+    echo " (  =^=  )"
+    echo " (        )"
+    echo " (         )"
+    echo " (          )))))))))))"
+    echo ""
+}
+
+main "$@"

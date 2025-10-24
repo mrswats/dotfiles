@@ -1,16 +1,13 @@
 alias less='less -r'
 alias untar='tar xvfz'
 alias c='clear'
-alias copy='xsel -i --clipboard' # Meant to use it as a pipe
 alias cd-='cd -'
 alias e="\$EDITOR --noplugins"
 alias v="\$EDITOR"
 alias vim="\$EDITOR"
-alias open='xdg-open'
 
 alias mv='mv -v'
 alias cp='cp -v'
-alias mkdir='mkdir -pv'
 
 alias -g ..='cd ..'
 alias -g ...="cd ../../"
@@ -18,12 +15,11 @@ alias -g ....="cd ../../../"
 
 alias -s html="\$BROWSER"
 
-alias ifconfig="echo 'deprecated. Use ip addr show instead.'"
-
 [ "$(command -v bat)" ] && alias cat='bat'
 [ "$(command -v ggrep)" ] && alias grep='ggrep'
 [ "$(command -v awshelp)" ] && alias aws=awshelp
 [ "$(command -v nitrogen)" ] && alias wallpaper='nitrogen --restore'
+[ "$(command -v rg)" ] && alias hl='rg -N --passthru'
 
 if [ "$(command -v eza)" ]; then
     alias ls='eza'
@@ -33,10 +29,6 @@ if [ "$(command -v eza)" ]; then
 else
     alias ls='ls --color=auto'
     alias ll='ls -lsF'
-fi
-
-if [ "$(command -v Obsidian)" ]; then
-    alias obsidian='Obsidian &>/dev/null&; disown'
 fi
 
 if [ "$(command -v dnf)" ]; then
@@ -76,10 +68,6 @@ if [ "$(command -v k9s)" ]; then
     alias kws='k9s --context staging-izi-cluster'
     alias kwp='k9s --context prod-izi-cluster'
 fi
-
-alias local-ip='python -c "import socket; print(socket.gethostbyname(socket.gethostname()))"'
-
-alias android-studio='$HOME/android-studio/bin/studio &>/dev/null&; disown'
 
 alias gst='git status'
 alias gc='git commit -v'
@@ -148,16 +136,8 @@ alias gstp='git stash pop'
 alias gstas='git stash show'
 alias gstcl='git stash clear'
 
-alias pd='python3 -m pytest --color yes -lvxs'
-alias pa='clear; python3 -m pytest --color yes --durations=10 -qk ""'
-alias pap='pa -n 4'
-alias pdj='pap --cov --cov-report term-missing'
-alias pdjc='pap --dov --cov-report html'
-alias pc="pa \$(git diff --name-only 'tests/test_*.py')"
-
-alias mkv='virtualenv .venv && source ./.venv/bin/activate'
 alias rmv='deactivate && rm -rf .venv'
-alias refv='deactivate && rm -rf .venv && virtualenv .venv'
+alias mkv='mkv && source ./.venv/bin/activate'
 alias a='source ./.venv/bin/activate'
 alias d='deactivate'
 

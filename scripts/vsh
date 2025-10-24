@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+function vsh() {
+    local FILENAME
+    FILENAME=${1:-"t.sh"}
+
+    cp -p $DOTFILES/templates/t.sh "$FILENAME"
+    "$EDITOR" "$FILENAME"
+}
+
+vsh "$@"

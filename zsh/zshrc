@@ -10,6 +10,7 @@ LOCAL_SHARE="$HOME/.local/share"
 LOCAL_BIN="$HOME/.local/bin"
 
 BIN_PATH=(
+    "$DOTFILES/scripts"
     "/opt/bin"
     "$LOCAL_BIN"
     "$CARGO_HOME/bin"
@@ -47,9 +48,7 @@ done
 
 unset LOCAL_SHARE LOCAL_BIN
 
-test -f "$DOTFILES/zsh/style.zsh" && source "$DOTFILES/zsh/style.zsh"
 test -f "$DOTFILES/zsh/aliases.zsh" && source "$DOTFILES/zsh/aliases.zsh"
-test -f "$DOTFILES/zsh/custom_functions.zsh" && source "$DOTFILES/zsh/custom_functions.zsh"
 test -f "$DOTFILES/zsh/fzf.zsh" && source "$DOTFILES/zsh/fzf.zsh"
 test -f "$DOTFILES/zsh/history.zsh" && source "$DOTFILES/zsh/history.zsh"
 test -f "$DOTFILES/zsh/keybindings.zsh" && source "$DOTFILES/zsh/keybindings.zsh"
@@ -58,6 +57,8 @@ test -f "$HOME/.sdkman/bin/sdkman-init.sh" && source "$HOME/.sdkman/bin/sdkman-i
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 test -f "$LOCAL_SH" && source "$LOCAL_SH" || true
+
+[[ "$(command -v fzf)" ]] && source <(fzf --zsh)
 
 [[ "$(command -v starship)" ]] && eval "$(starship init zsh)"
 

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    clear
+    .venv/bin/python3 -m pytest --color yes --durations=10 -qk "" "$@"
+}
+
+main "$@"

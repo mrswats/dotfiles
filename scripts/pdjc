@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    pap --dov --cov-report html "$@"
+}
+
+main "$@"
