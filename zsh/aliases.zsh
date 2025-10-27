@@ -44,12 +44,6 @@ if [ "$(command -v dnf)" ]; then
     alias dnfr='sudo dnf remove'
 fi
 
-alias tf=terraform
-alias tfp='terraform plan -out plan.out'
-alias tfa='terraform apply "plan.out" && rm "plan.out"'
-alias tfa!='tfp && tfa'
-alias tff='terraform fmt .'
-
 if [ "$(command -v kubectl)" ]; then
     alias kn='kubectl ns'
     alias kx='kubectl ctx'
