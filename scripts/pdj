@@ -3,7 +3,7 @@
 set -euo pipefail
 
 main () {
-    pap --cov --cov-report term-missing "$@"
+    .venv/bin/python3 -m pytest --color yes -lvxs -n 4 --cov --cov-report term-missing "$@"
 }
 
 main "$@"

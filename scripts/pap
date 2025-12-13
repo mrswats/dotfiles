@@ -3,7 +3,7 @@
 set -euo pipefail
 
 main () {
-    pa -n 4
+    .venv/bin/python3 -m pytest --color yes -lvxs -n 4 "$@"
 }
 
 main "$@"

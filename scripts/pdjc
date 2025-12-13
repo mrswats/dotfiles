@@ -3,7 +3,7 @@
 set -euo pipefail
 
 main () {
-    pap --dov --cov-report html "$@"
+    .venv/bin/python3 -m pytest --color yes -lvxs -n 4 --cov --cov-report html "$@"
 }
 
 main "$@"
