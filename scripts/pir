@@ -3,7 +3,8 @@
 set -euo pipefail
 
 main () {
-    .venv/bin/python3 -m pytest --color yes -qk "" -n 4 "$@"
+    pip install -r test-requirements.txt
+    install-sugar
 }
 
 main "$@"
