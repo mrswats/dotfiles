@@ -1,7 +1,7 @@
 * {
     border: none;
     font-family: "Fira Code", mono;
-    font-size: 14px;
+    font-size: 20px;
 
     min-height: 0;
 
@@ -43,12 +43,6 @@ window#waybar {
     color: #7aa2f7;
 }
 
-#clock,
-#pulseaudio {
-    padding: 0 10px;
-    margin: 6px 3px;
-}
-
 #window,
 #workspaces {
     margin: 0 4px;
@@ -62,10 +56,4 @@ window#waybar {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right>widget:last-child>#workspaces {
     margin-right: 0;
-}
-
-#language {
-    padding: 0 5px;
-    margin: 6px 3px;
-    min-width: 16px;
 }

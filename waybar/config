@@ -1,34 +1,24 @@
-
 {
+    "reload_style_on_change": true,
     "position": "top",
-    "height": 10,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "hyprland/language", "clock"],
+    "height": 14,
+    "width": 750,
+    "modules-left": [],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": [],
     "hyprland/workspaces": {
         "format": " {icon} ",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "",
-            "10": ""
+            "1": " ",
+            "2": " ",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "6": " ",
+            "7": " ",
+            "8": " ",
+            "9": " ",
+            "10": " "
         }
-    },
-    "clock": {
-        "format": "{:%I:%M   %Y-%m-%d }"
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}%  {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "on-click": "pavucontrol"
-    },
+    }
 }
