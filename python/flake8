@@ -1,5 +1,5 @@
 [flake8]
-max-line-length = 120
+max-line-length = 99
 exclude = .tox,.git,docs,.eggs
 ignore = H304,D100,D101,D102,D103,D104,D105,D106,D107,D202,D400,D401,E203,S101,W503,SC100,SC200
 enable-extensions = H203,H904
