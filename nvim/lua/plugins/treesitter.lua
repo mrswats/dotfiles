@@ -1,5 +1,5 @@
 local function setup()
-    require("nvim-treesitter.configs").setup({
+    require("nvim-treesitter").setup({
         ensure_installed = {
             "bash",
             "c",
@@ -92,7 +92,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     dependencies = {
-        "nvim-treesitter/nvim-treesitter-textobjects",
+        { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
         "windwp/nvim-ts-autotag",
     },
     config = function()
