@@ -36,12 +36,14 @@ local function setup()
         end,
     })
 
-    vim.lsp.enable("pylsp")
+    vim.lsp.enable("cssls")
     vim.lsp.enable("djls")
+    vim.lsp.enable("djlsp")
+    vim.lsp.enable("html")
+    vim.lsp.enable("ocamllsp")
+    vim.lsp.enable("pylsp")
     vim.lsp.enable("tailwindcss")
     vim.lsp.enable("ts_ls")
-    vim.lsp.enable("html")
-    vim.lsp.enable("cssls")
 end
 
 return {
