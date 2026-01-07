@@ -1,6 +1,15 @@
-local function setup()
-    require("nvim-treesitter").setup({
-        ensure_installed = {
+return {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    build = ":TSUpdate",
+    dependencies = {
+        "windwp/nvim-ts-autotag",
+    },
+    config = function()
+        local treesitter = require("nvim-treesitter")
+        local autotag = require("nvim-ts-autotag")
+
+        treesitter.install({
             "bash",
             "c",
             "comment",
@@ -29,73 +38,12 @@ local function setup()
             "toml",
             "typescript",
             "yaml",
-        },
-        incremental_selection = {
-            enable = true,
-            keymaps = {
-                init_selection = "gnn",
-                node_incremental = "grn",
-                scope_incremental = "grc",
-                node_decremental = "grm",
-            },
-        },
-        highlight = {
-            enable = true,
-        },
-        autotag = {
-            enable = true,
-        },
-        -- Indent is not working
-        -- Ref.: https://github.com/nvim-treesitter/nvim-treesitter/issues/802
-        -- indent = {
-        --     enable =
-        -- }
-        textobjects = {
-            select = {
-                enable = true,
-                lookahead = true,
-                keymaps = {
-                    ["af"] = "@function.outer",
-                    ["if"] = "@function.inner",
-                    ["ac"] = "@class.outer",
-                    ["ic"] = "@class.inner",
-                    ["ib"] = "@block.inner",
-                    ["ab"] = "@block.outer",
-                    ["ak"] = "@comment.outer",
-                },
-            },
-            move = {
-                enable = true,
-                set_jumps = true,
-                goto_next_start = {
-                    ["]m"] = "@function.outer",
-                    ["]]"] = "@class.outer",
-                },
-                goto_next_end = {
-                    ["]M"] = "@function.outer",
-                    ["]["] = "@class.outer",
-                },
-                goto_previous_start = {
-                    ["[m"] = "@function.outer",
-                    ["[["] = "@class.outer",
-                },
-                goto_previous_end = {
-                    ["[M"] = "@function.outer",
-                    ["[]"] = "@class.outer",
-                },
-            },
-        },
-    })
-end
+        })
 
-return {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    dependencies = {
-        { "nvim-treesitter/nvim-treesitter-textobjects", branch = "main" },
-        "windwp/nvim-ts-autotag",
-    },
-    config = function()
-        setup()
+        treesitter.setup({
+            install_dir = vim.fn.stdpath("data") .. "/site",
+        })
+
+        autotag.setup()
     end,
 }
