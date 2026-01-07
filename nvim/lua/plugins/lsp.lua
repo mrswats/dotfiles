@@ -37,7 +37,7 @@ local function setup()
     })
 
     vim.lsp.enable("pylsp")
-    vim.lsp.enable("djlsp")
+    vim.lsp.enable("djls")
     vim.lsp.enable("tailwindcss")
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("html")
