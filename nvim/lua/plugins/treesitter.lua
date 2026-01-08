@@ -1,49 +1,52 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    branch = "main",
+    branch = "master",
     build = ":TSUpdate",
-    dependencies = {
-        "windwp/nvim-ts-autotag",
-    },
+    lazy = false,
     config = function()
-        local treesitter = require("nvim-treesitter")
-        local autotag = require("nvim-ts-autotag")
-
-        treesitter.install({
-            "bash",
-            "c",
-            "comment",
-            "dockerfile",
-            "editorconfig",
-            "git_config",
-            "gitignore",
-            "go",
-            "hcl",
-            "html",
-            "htmldjango",
-            "hyprlang",
-            "javascript",
-            "json",
-            "latex",
-            "lua",
-            "make",
-            "markdown",
-            "markdown_inline",
-            "python",
-            "rst",
-            "rust",
-            "ssh_config",
-            "terraform",
-            "tmux",
-            "toml",
-            "typescript",
-            "yaml",
+        require("nvim-treesitter.configs").setup({
+            ensure_installed = {
+                "bash",
+                "c",
+                "comment",
+                "dockerfile",
+                "editorconfig",
+                "git_config",
+                "gitignore",
+                "go",
+                "hcl",
+                "html",
+                "htmldjango",
+                "hyprlang",
+                "javascript",
+                "json",
+                "latex",
+                "lua",
+                "make",
+                "markdown",
+                "markdown_inline",
+                "python",
+                "rst",
+                "rust",
+                "ssh_config",
+                "terraform",
+                "tmux",
+                "toml",
+                "typescript",
+                "yaml",
+            },
+            highlight = {
+                enable = true,
+            },
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "gnn",
+                    node_incremental = "grn",
+                    scope_incremental = "grc",
+                    node_decremental = "grm",
+                },
+            },
         })
-
-        treesitter.setup({
-            install_dir = vim.fn.stdpath("data") .. "/site",
-        })
-
-        autotag.setup()
     end,
 }
