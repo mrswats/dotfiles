@@ -131,7 +131,7 @@ alias gstas='git stash show'
 alias gstcl='git stash clear'
 
 alias rmv='deactivate && rm -rf .venv'
-alias mkv='mkv && source ./.venv/bin/activate'
+alias mkv='_mkv && source ./.venv/bin/activate'
 alias a='source ./.venv/bin/activate'
 alias d='deactivate'
 
