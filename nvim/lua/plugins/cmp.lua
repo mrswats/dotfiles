@@ -32,7 +32,6 @@ local function setup()
             { name = "nvim_lsp" },
             { name = "buffer" },
             { name = "path" },
-            { name = "emoji" },
         }),
     })
 end
@@ -45,7 +44,6 @@ return {
     dependencies = {
         "andersevenrud/cmp-tmux",
         "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-emoji",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-path",
         "onsails/lspkind.nvim",
