@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    pip install --quiet pip-tools
+    pip-compile --extra=test pyproject.toml
+    pip-compile --extra=test --generate-hashes --output-file=test-requirements.txt pyproject.toml
+
+}
+
+main "$@"
