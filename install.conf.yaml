@@ -12,12 +12,14 @@
     - ~/.config/hypr/
     - ~/.config/waybar/
     - ~/.config/dunst
+    - ~/.config/ghostty/
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.wezterm.lua: wezterm/wezterm.lua
+    ~/.config/ghostty/config: ghostty/config
     ~/.config/git/config: git/config
     ~/.config/nvim/init.lua: nvim/init.lua
     ~/.config/nvim/lua/: nvim/lua/

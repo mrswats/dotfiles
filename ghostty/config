@@ -1,0 +1,5 @@
+font-family = "Comic Mono"
+font-size = 16
+theme = TokyoNight Storm
+
+shell-integration = zsh
