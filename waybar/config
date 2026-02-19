@@ -2,10 +2,16 @@
     "reload_style_on_change": true,
     "position": "top",
     "height": 14,
-    "width": 750,
     "modules-left": [],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [],
+    "modules-right": ["pulseaudio", "clock"],
+    "clock": {
+        "format": "{:%R - %A, %B %d, %Y }"
+    },
+    "pulseaudio": {
+        "format": "{volume}%  ",
+        "format-muted": "mute "
+    },
     "hyprland/workspaces": {
         "format": " {icon} ",
         "format-icons": {
