@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main () {
+    local VERSION
+    VERSION=$(tomlq -r .project.version pyproject.toml)
+
+    git add pyproject.toml
+    git commit -m "Release v$VERSION"
+    git tag "v$VERSION" -m "Release v$VERSION"
+}
+
+main "$@"
