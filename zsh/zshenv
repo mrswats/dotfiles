@@ -48,7 +48,7 @@ export NVIM_PLUGINS_CONFIG="$NVIM_CONFIG/plugins"
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_DEFAULT_OPTS="
 --height 50% --tmux 90%,80% \
---no-sort --layout reverse --multi --min-height 20+ --border \
+--layout reverse --multi --min-height 20+ --border \
 --no-separator --header-border horizontal \
 --border-label-pos 2 \
 --color 'label:blue' \
