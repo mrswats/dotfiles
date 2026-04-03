@@ -15,26 +15,6 @@ WIDGETS=(
     fzf-open-file-in-editor
 )
 
-forgit-add () {
-    git forgit add
-    zle reset-prompt
-}
-
-forgit-diff () {
-    git forgit diff
-    zle reset-prompt
-}
-
-forgit-log () {
-    git forgit log
-    zle reset-prompt
-}
-
-forgit-switch () {
-    git forgit checkout_branch
-    zle reset-prompt
-}
-
 for widget ($WIDGETS[@]) zle -N $widget
 
 bindkey "^G^E" fzf-open-file-in-editor
