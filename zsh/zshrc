@@ -19,11 +19,19 @@ BIN_PATH=(
     "$FLYCTL_INSTALL/bin"
     "$TEXLIVE_INSTALL"
     "$BUN_INSTALL/bin"
-    "$HOME/.maestro/bin"
 )
 
-F_PATH=("$LOCAL_SHARE/zfunc" "$HOME/.cache/zsh")
+F_PATH=(
+    "$LOCAL_SHARE/zfunc"
+    "$HOME/.cache/zsh"
+)
 
+SOURCE_FILES=(
+    "$DOTFILES/zsh/keybindings.sh"
+    "$DOTFILES/zsh/aliases.sh"
+    "$DOTFILES/zsh/fzf.sh"
+    "$LOCAL_SH"
+)
 
 if [[ -d "$ZPLUG_HOME" ]]; then
     source $ZPLUG_HOME/init.zsh
@@ -38,22 +46,20 @@ if [[ -d "$ZPLUG_HOME" ]]; then
     zplug load
 fi
 
-for new_path in "${BIN_PATH[@]}"; do
-	[[ -d "$new_path" ]] && path+="$new_path"
-done
-
-for new_path in "${F_PATH[@]}"; do
-	[[ -d "$new_path" ]] && fpath+="$new_path"
-done
+path+=($BIN_PATH[@])
+fpath+=($F_PATH[@])
+for SRC ("$SOURCE_FILES[@]") test -f $SRC && source $SRC
 
 unset LOCAL_SHARE LOCAL_BIN
+
+[[ "$(command -v fzf)" ]] && source <(fzf --zsh)
+[[ "$(command -v starship)" ]] && eval "$(starship init zsh)"
 
 # Custom configurations for zsh
 
 # +--- History ---+
 # See:
 #   1. http://zsh.sourceforge.net/Doc/Release/Options.html#History
-
 HISTSIZE=50000
 SAVEHIST=50000
 
@@ -104,16 +110,5 @@ setopt no_hist_beep
 # share command history data
 setopt share_history
 #
-# vi: ft=zsh
-
-
-test -f "$DOTFILES/zsh/aliases.zsh" && source "$DOTFILES/zsh/aliases.zsh"
-test -f "$DOTFILES/zsh/fzf.zsh" && source "$DOTFILES/zsh/fzf.zsh"
-test -f "$DOTFILES/zsh/keybindings.zsh" && source "$DOTFILES/zsh/keybindings.zsh"
-
-test -f "$LOCAL_SH" && source "$LOCAL_SH" || true
-
-[[ "$(command -v fzf)" ]] && source <(fzf --zsh)
-[[ "$(command -v starship)" ]] && eval "$(starship init zsh)"
 
 # vi: ft=zsh

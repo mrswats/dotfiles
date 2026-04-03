@@ -4,7 +4,7 @@ set -euo pipefail
 
 main () {
     # Meant to use it as a pipe
-    exec xsel -i --clipboard "$@"
+    exec wl-copy "$@"
 }
 
 main "$@"

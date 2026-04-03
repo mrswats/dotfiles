@@ -26,8 +26,6 @@ function main()
             border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
     })
-
-    vim.cmd([[colorscheme tokyonight-night]])
 end
 
 main()
