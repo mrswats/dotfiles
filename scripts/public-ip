@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-main () {
-    local PUBLIC_IP=$(curl -sL v4.ifconfig.co | awk '{ print $0 "/32" }')
-    echo $PUBLIC_IP
+main() {
+	local PUBLIC_IP
+	PUBLIC_IP=$(curl -sL v4.ifconfig.co | awk '{ print $0 "/32" }')
+	echo "$PUBLIC_IP"
 }
 
 main "$@"

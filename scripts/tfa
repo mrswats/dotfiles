@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-main () {
-    exec tofu apply "plan.out" "$@"
-    rm "plan.out"
+main() {
+	exec tofu apply "plan.out" "$@"
+	rm "plan.out"
 }
 
 main "$@"

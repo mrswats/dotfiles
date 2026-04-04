@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-main () {
+main() {
 	awk -F "${2:- }" "{ print \$${1:-1} }"
 }
 

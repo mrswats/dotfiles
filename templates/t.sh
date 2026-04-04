@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-main () {
+main() {
     echo "$@"
 }
 

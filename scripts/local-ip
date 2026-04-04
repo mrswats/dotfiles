@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    python -c "import socket; print(socket.gethostbyname(socket.gethostname()))"
+main() {
+	python -c "import socket; print(socket.gethostbyname(socket.gethostname()))"
 }
 
 main

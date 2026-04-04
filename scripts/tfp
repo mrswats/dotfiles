@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    exec tofu plan -out plan.out "$@"
+main() {
+	exec tofu plan -out plan.out "$@"
 }
 
 main "$@"

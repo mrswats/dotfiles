@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    pa $(git diff --name-only 'tests/test_*.py')
+main() {
+	pa "$(git diff --name-only 'tests/test_*.py')"
 }
 
 main "$@"

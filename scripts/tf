@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    exec tofu "$@"
+main() {
+	exec tofu "$@"
 }
 
 main "$@"

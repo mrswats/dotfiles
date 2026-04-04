@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    exec mkdir -pv "$@"
+main() {
+	exec mkdir -pv "$@"
 }
 
 main "$@"

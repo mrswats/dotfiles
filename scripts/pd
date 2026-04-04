@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    .venv/bin/python3 -m pytest --color yes -lvxs "$@"
+main() {
+	.venv/bin/python3 -m pytest --color yes -lvxs "$@"
 }
 
 main "$@"

@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-main () {
-    tfp
-    tfa
+main() {
+	tfp
+	tfa
 }
 
 main "$@"

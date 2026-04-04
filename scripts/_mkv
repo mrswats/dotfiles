@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    virtualenv .venv "$@"
+main() {
+	virtualenv .venv "$@"
 }
 
 main "$@"

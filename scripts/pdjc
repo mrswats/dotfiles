@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    .venv/bin/python3 -m pytest --color yes -qk "" -n 4 --cov --cov-report html "$@"
+main() {
+	.venv/bin/python3 -m pytest --color yes -qk "" -n 4 --cov --cov-report html "$@"
 }
 
 main "$@"

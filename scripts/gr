@@ -2,15 +2,15 @@
 
 set -euo pipefail
 
-main () {
-    is-in-git-repo || return
-    git restore $(
-        git ls-files --modified |
-            fzf \
-                --multi \
-                --border-label "Select a file" \
-                --preview 'git diff {+1} | delta'
-    )
+main() {
+	is-in-git-repo || return
+	git restore "$(
+		git ls-files --modified |
+			fzf \
+				--multi \
+				--border-label "Select a file" \
+				--preview 'git diff {+1} | delta'
+	)"
 }
 
 main "$@"

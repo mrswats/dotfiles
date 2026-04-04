@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
+function main() {
+	local FILENAME
+	FILENAME=${1:-"t.py"}
 
-function vt() {
-    local FILENAME
-    FILENAME=${1:-"t.py"}
+	if test -f "$FILENAME"; then
+		echo "File '$FILENAME' already exists."
+		exit 1
+	fi
 
-    if test -f $FILENAME; then
-        echo "File '$FILENAME' already exists."
-        exit 1
-    fi
-
-    cp -p $DOTFILES/templates/t.py "$FILENAME"
-    "$EDITOR" "$FILENAME"
+	cp -p "$DOTFILES/templates/t.py" "$FILENAME"
+	"$EDITOR" "$FILENAME"
 }
 
-vt "$@"
+main "$@"

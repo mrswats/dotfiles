@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
+function main() {
+	local FILENAME
+	FILENAME=${1:-"t.sh"}
 
-function vsh() {
-    local FILENAME
-    FILENAME=${1:-"t.sh"}
-
-    cp -p $DOTFILES/templates/t.sh "$FILENAME"
-    "$EDITOR" "$FILENAME"
+	cp -p "$DOTFILES/templates/t.sh" "$FILENAME"
+	"$EDITOR" "$FILENAME"
 }
 
-vsh "$@"
+main "$@"

@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-main () {
-    .venv/bin/python3 -m pytest --color yes -n 4 --cov --cov-report term-missing "$@"
+main() {
+	.venv/bin/python3 -m pytest --color yes -n 4 --cov --cov-report term-missing "$@"
 }
 
 main "$@"
