@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-
-GIT_COMMIT_FILE=$1
-
-# vim: ft=sh
