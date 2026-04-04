@@ -3,7 +3,9 @@ fzf-choose-dir() {
         | fzf \
         --border-label "Sel·lecciona un directori"\
         --nth 2.. --tac --no-sort --accept-nth 2.. \
-        --preview 'echo -e "Sel·lecciont {+2..}\n";eza --color=always --icons --long --git {+2..}' \
+        --preview 'eza --color=always --icons --long --git {+2..}' \
+        --header 'Ctrl-T: open file browser | Ctrl-/ to switch preview position' \
+        --bind 'ctrl-t:become(nautilus {+2..})'
     ) && echo $target_dir
 }
 
@@ -13,6 +15,7 @@ fzf-open-file-in-editor() {
         --border-label "Sel·lecciona un fitxer" \
         --tac --no-sort \
         --preview 'bat --color always {}' \
+        --header 'Prem enter to open the file in neovim' \
         --bind 'enter:become(nvim {})'
 }
 

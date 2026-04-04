@@ -7,8 +7,8 @@ main () {
     git restore $(
         git ls-files --modified |
             fzf \
-                --header "Select a file" \
-                -m \
+                --multi \
+                --border-label "Select a file" \
                 --preview 'git diff {+1} | delta'
     )
 }
