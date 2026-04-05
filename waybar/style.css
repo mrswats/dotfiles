@@ -6,18 +6,20 @@
     min-height: 0;
 
     /* --red: #f7768e; */
-    /* --blue: #7aa2f7; */
-    /* --orange: #ff9e64; */
-    /* --yellow: #e0af68; */
-    /* --green: #9ece6a; */
-    /* --purple: #bb9af7; */
-    /* --gray: #565f89; */
-    /* --background: #24283b; */
+    /* --blue: #193549; */
+    /* - off blue: #0D3A58 */
+    /* --orange: #FF9D00; */
+    /* --yellow: #ffc600; */
+    /* --green: #2AFFDF; */
+    /* --purple: #FB94FF; */
+    /* --gray: #35434d; */
+    /*   light blue: #9effff */
+    /* --background: #15232D; */
     /* --foreground: #9aa5ce; */
 }
 
 window#waybar {
-    background-color: #24283b;
+    background-color: #193549;
     color: #9aa5ce;
     padding-top: 10px;
 }
@@ -32,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    color: #565f89;
+    color: #35434d;
 }
 
 #workspaces button.urgent {
@@ -40,7 +42,7 @@ window#waybar {
 }
 
 #workspaces .active {
-    color: #7aa2f7;
+    color: #9effff;
 }
 
 #window,
