@@ -49,13 +49,6 @@ local function dashboard_opts()
         dashboard.button("q", "  >  Quit nvim", ":qa!<cr>"),
     }
 
-    dashboard.section.footer.val = {
-        [[                                ]],
-        [[  Everything is made of atoms.  ]],
-        [[                  - R. Feynman  ]],
-        [[                                ]],
-    }
-
     return dashboard
 end
 
