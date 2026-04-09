@@ -1,52 +1,46 @@
+local parsers = {
+    "bash",
+    "c",
+    "comment",
+    "dockerfile",
+    "editorconfig",
+    "git_config",
+    "gitignore",
+    "go",
+    "hcl",
+    "html",
+    "htmldjango",
+    "hyprlang",
+    "javascript",
+    "json",
+    "latex",
+    "lua",
+    "make",
+    "markdown",
+    "markdown_inline",
+    "python",
+    "rst",
+    "rust",
+    "ssh_config",
+    "terraform",
+    "tmux",
+    "toml",
+    "typescript",
+    "yaml",
+}
+
 return {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
     build = ":TSUpdate",
     lazy = false,
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = {
-                "bash",
-                "c",
-                "comment",
-                "dockerfile",
-                "editorconfig",
-                "git_config",
-                "gitignore",
-                "go",
-                "hcl",
-                "html",
-                "htmldjango",
-                "hyprlang",
-                "javascript",
-                "json",
-                "latex",
-                "lua",
-                "make",
-                "markdown",
-                "markdown_inline",
-                "python",
-                "rst",
-                "rust",
-                "ssh_config",
-                "terraform",
-                "tmux",
-                "toml",
-                "typescript",
-                "yaml",
-            },
-            highlight = {
-                enable = true,
-            },
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    init_selection = "gnn",
-                    node_incremental = "grn",
-                    scope_incremental = "grc",
-                    node_decremental = "grm",
-                },
-            },
+        require("nvim-treesitter").install(parsers)
+
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = parsers,
+            callback = function()
+                vim.treesitter.start()
+            end,
         })
     end,
 }
