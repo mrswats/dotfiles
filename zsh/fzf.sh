@@ -17,7 +17,6 @@ fzf-open-file-in-editor() {
     fd -t f -L -H -E .git/ |
         fzf \
             --border-label "Sel·lecciona un fitxer" \
-            --tac --no-sort \
             --preview 'bat --color always {}' \
             --header 'Prem enter to open the file in neovim' \
             --bind 'enter:become(nvim {})'
