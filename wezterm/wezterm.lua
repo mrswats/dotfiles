@@ -7,7 +7,7 @@ config.enable_tab_bar = false
 
 config.color_scheme = "tokyonight-storm"
 
-config.font = wezterm.font("Maple Mono")
+config.font = wezterm.font("Maple Mono NF")
 config.font_size = 14
 
 return config
