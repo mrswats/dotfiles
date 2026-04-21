@@ -1,7 +1,7 @@
 [user]
-    email = ferran.jovell@gmail.com
+    email = f.jovell@swishforgood.com
     name = Ferran Jovell
-    ; signingkey = FA9B3458F68001AB
+    signingkey = FDB745A7
 
 [core]
     attributesFile = ~/.config/dotfiles/git/gitattributes
@@ -53,7 +53,7 @@
 	enabled = true
 
 [commit]
-	gpgsign = false
+	gpgsign = true
 
 [format]
     pretty = oneline
