@@ -3,7 +3,7 @@
 set -euo pipefail
 
 main() {
-	pip install -r <(uv export --format requirements.txt)
+	pip install -r <(uv export --frozen --format requirements.txt --all-extras --group dev)
 	install-sugar
 }
 
