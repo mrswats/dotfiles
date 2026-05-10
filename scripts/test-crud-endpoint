@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main() {
+	local FILENAME
+	FILENAME=${1:-"test_ENDPOINT_crud.py"}
+
+	if test -f "$FILENAME"; then
+		echo "File '$FILENAME' already exists."
+		exit 1
+	fi
+
+	cp -p "$DOTFILES/templates/test_ENDPOINT_crud.py" "$FILENAME"
+	exec "$EDITOR" "$FILENAME"
+}
+
+main "$@"
