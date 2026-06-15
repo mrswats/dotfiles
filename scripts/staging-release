@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+main() {
+	gh pr create --base staging --title "Staging Release" --fill
+}
+
+main "$@"
