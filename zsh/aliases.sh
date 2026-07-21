@@ -1,3 +1,5 @@
+#! /usr/bin/sh
+
 alias less='less -r'
 alias untar='tar xvfz'
 alias c='clear'
@@ -80,7 +82,7 @@ alias gdc='git forgit diff --cached'
 alias gd='git diff'
 alias gdh='git diff HEAD^!'
 alias gshd='gsh develop..HEAD'
-alias gf='git fetch --prune'
+alias gf='git fetch'
 alias gl='git down'
 alias gcl='git clone'
 alias gsw="git switch"

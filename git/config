@@ -72,6 +72,9 @@
     rebase = true
     autostash = true
 
+[fetch]
+    prune = true
+
 [push]
 	autoSetUpRemote = true
 
