@@ -21,6 +21,8 @@
     meta = "show --quiet --pretty=fuller"
     publish = "push -u origin HEAD -f"
     wip = "commit -am '[skip-ci] WIP' --no-verify"
+    fixup = "commit -m 'fixup'"
+    pr-comments = "commit -m 'pr comments'"
     show-containing-tag = "!f() { git describe --contains \"$1\" | sed -E 's/[~^][0-9]*//g' ; }; f"
     push-all = !git remote | xargs -L1 git push
 
