@@ -29,6 +29,21 @@
 [init]
 	defaultBranch = main
 
+## https://x.com/glyph/status/1359955841810530304
+
+[protocol "http"]
+allow = never
+
+[protocol "git"]
+allow = never
+
+[fetch]
+    fsckObjects = true
+[transfer]
+    fsckObjects = true
+[receive]
+    fsckObjects = true
+
 [delta]
     dark = true
     line-numbers = true
