@@ -7,6 +7,9 @@ main() {
 	DIR=$1
 
 	git clone https://github.com/mrswats/python-project-template.git "$DIR"
+	cd "$DIR"
+	git remote rm origin
+	cd -
 }
 
 main "$@"
