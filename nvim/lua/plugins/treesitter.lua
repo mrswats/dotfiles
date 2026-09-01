@@ -23,7 +23,6 @@ local parsers = {
     "rust",
     "ssh_config",
     "terraform",
-    "tmux",
     "toml",
     "typescript",
     "yaml",
