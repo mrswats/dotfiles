@@ -16,7 +16,8 @@ local SECONDARY_MONITOR = "DP-3"
 ------------------
 hl.monitor({
     output = MAIN_MONITOR,
-    mode = "highres",
+    -- mode = "highrr",
+    mode = "2560x1440@59.9", -- Skyrim preset
     position = "auto",
     scale = 1,
 })
