@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 config.enable_tab_bar = false
 
-config.color_scheme = "tokyonight-storm"
+config.color_scheme = "nord"
 
 config.font = wezterm.font("Maple Mono")
 config.font_size = 14
