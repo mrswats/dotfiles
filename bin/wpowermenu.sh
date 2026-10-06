@@ -13,7 +13,7 @@ reboot() {
 }
 
 logout() {
-    hyprctl dispatch exit
+    hyprctl dispatch 'hl.dsp.exit()'
 }
 
 lock() {

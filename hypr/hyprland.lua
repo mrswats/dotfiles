@@ -8,8 +8,8 @@ local ALT_BROSER = "chromium-browser"
 local MENU = DOTFILES .. "/bin/rofi.sh"
 local POWER_MENU = DOTFILES .. "/bin/wpowermenu.sh"
 local MAIN_MOD = "SUPER"
-local MAIN_MONITOR = "DP-2"
-local SECONDARY_MONITOR = "DP-3"
+local MAIN_MONITOR = "DP-1"
+local SECONDARY_MONITOR = "DP-2"
 
 ------------------
 ---- MONITORS ----
@@ -22,6 +22,7 @@ hl.monitor({
 })
 hl.monitor({
     output = SECONDARY_MONITOR,
+    disabled = false,
     mode = "highres",
     position = "auto-right",
     scale = 1,
