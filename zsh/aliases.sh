@@ -7,6 +7,7 @@ alias cd-='cd -'
 alias e="\$EDITOR --noplugins"
 alias v="\$EDITOR"
 alias vim="\$EDITOR"
+alias today='date -I'
 
 alias mv='mv -v'
 alias cp='cp -v'
@@ -57,6 +58,7 @@ if [ "$(command -v kubectl)" ]; then
     alias ks='kubectl describe'
     alias krr='kubectl rollout restart'
     alias krs='kubectl rollout status'
+    alias k='kubectl'
 fi
 
 if [ "$(command -v k9s)" ]; then
