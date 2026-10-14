@@ -40,11 +40,12 @@ local function setup()
     vim.lsp.enable("djls")
     vim.lsp.enable("djlsp")
     vim.lsp.enable("html")
+    vim.lsp.enable("jsonls")
+    vim.lsp.enable("lua_ls")
     vim.lsp.enable("ocamllsp")
     vim.lsp.enable("pylsp")
     vim.lsp.enable("tailwindcss")
     vim.lsp.enable("ts_ls")
-    vim.lsp.enable("lua_ls")
 end
 
 return {
