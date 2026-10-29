@@ -1,7 +1,6 @@
 cmake
+curl
 dunst
-flameshot
-fontawesome-fonts
 fzf
 gh
 git
@@ -9,12 +8,9 @@ git-extras
 jq
 nodejs
 playerctl
-polybar
-redshift
 rofi
-shellcheck
-shfmt
 thunar
 tmux
-xbacklight
+unzip
+util-linux-user
 zsh

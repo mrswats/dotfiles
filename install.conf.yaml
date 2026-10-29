@@ -1,18 +1,13 @@
----
-- create:
-    - ~/.config/
-    - ~/.config/nvim/
-    - ~/.config/git/
-    - ~/.config/i3/
-    - ~/.config/k9s
-    - ~/.local/share/zpm/
-    - ~/.local/share/fonts/comic/
-    - ~/.local/share/fonts/hack/
-    - ~/.local/share/fonts/inconsolata/
-    - ~/.config/hypr/
-    - ~/.config/waybar/
-    - ~/.config/dunst
-    - ~/.config/ghostty/
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- clean: ['~']
 
 - link:
     ~/.tmux.conf: tmux/tmux.conf
@@ -22,7 +17,7 @@
     ~/.config/ghostty/config: ghostty/config
     ~/.config/git/config: git/config
     ~/.config/nvim/init.lua: nvim/init.lua
-    ~/.config/nvim/lua/: nvim/lua/
+    ~/.config/nvim/lua: nvim/lua
     ~/.config/k9s/views.yaml: k9s/views.yaml
     ~/.config/hypr/hyprland.lua: hypr/hyprland.lua
     ~/.config/hypr/hyprlock.conf: hypr/hyprlock.conf
@@ -34,74 +29,27 @@
     ~/.config/i3/config:
       if: "[ $(uname) = Linux ]"
       path: i3/config
-      relink: true
       force: true
-    ~/.config/rofi/:
+    ~/.config/rofi:
       if: "[ $(uname) = Linux ]"
-      path: rofi/
+      path: rofi
 
 - shell:
-    - chsh -s $(command -v zsh)
-    - curl -sS https://starship.rs/install.sh | sh
-    - command: |
-        if [[ $(uname) =~ Darwin ]]; then
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        else
-          true
-        fi
-    - command: |
-        if [[ $(command -v brew) ]]; then
-          xargs brew install < ./bootstrap/brewfile
-        else
-          true
-        fi
-    - command: |
-        if [[ $(command -v dnf) ]]; then
-          xargs sudo dnf install -y < ./bootstrap/dnf.list
-          sudo dnf groupinstall -y "Development Tools"
-        else
-          true
-        fi
-    - command: |
-        for pkg in $(cat ./bootstrap/pipx.list); do
-          pipx install $pkg
-        done
-    - command: |
-        export CARGO_HOME="$HOME/.local/share/cargo"
-        export RUSTUP_HOME="$HOME/.local/share/rustup"
-        curl -sL --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        for pkg in $(cat ./bootstrap/cargo.list); do
-          cargo install $pkg
-        done
-    - command: |
-        if [[ $(command -v npm) ]]; then
-          npm -i g yarn
-        else
-          true
-        fi
-    - command: |
-        if [[ $(command -v yarn) ]]; then
-          for pkg in $(cat ./bootstrap/yarn.list); do
-            yarn global add --prefix ~/.local/ $pkg
-          done
-        else
-          true
-        fi
-    - command: |
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-        git clone --recursive https://github.com/zpm-zsh/zpm ~/.local/share/zpm
-    - command: |
-        curl -sL -o ComicMono.ttf https://dtinth.github.io/comic-mono-font/ComicMono.ttf
-        curl -sL -o ComicMono-Bold.ttf https://dtinth.github.io/comic-mono-font/ComicMono-Bold.ttf
-        mv *.ttf ~/.local/share/fonts/comic/
-
-        curl -sL -o InconsolataLGC.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/InconsolataLGC.zip
-        unzip InconsolataLGC.zip
-        mv *.ttf ~/.local/share/fonts/inconsolata/
-        rm InconsolataLGC.zip readme.md
-
-        curl -sSL -o hack.zip https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
-        unzip hack.zip
-        mv ttf/*.ttf ~/.local/share/fonts/hack/
-
-        fc-cache -v
+    - command: bash bootstrap/10-homebrew.sh
+      description: Homebrew (macOS)
+    - command: bash bootstrap/20-packages.sh
+      description: System packages
+    - command: bash bootstrap/30-starship.sh
+      description: Starship
+    - command: bash bootstrap/40-rust.sh
+      description: Rust + cargo packages
+    - command: bash bootstrap/50-pipx.sh
+      description: pipx packages
+    - command: bash bootstrap/60-node.sh
+      description: yarn + global packages
+    - command: bash bootstrap/70-plugins.sh
+      description: tmux/zsh plugins
+    - command: bash bootstrap/80-fonts.sh
+      description: Fonts
+    - command: bash bootstrap/90-shell.sh
+      description: Login shell

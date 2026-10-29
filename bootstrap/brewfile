@@ -1,16 +1,12 @@
-circleci
-fnm
+curl
 fzf
 gh
 git
 git-extras
 grep
-heroku
 jq
 neovim
 nodejs
 postgresql
-shellcheck
-shfmt
 sl
 tmux

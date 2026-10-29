@@ -1,9 +1,3 @@
-black
-django-upgrade
-djhtml
-flake8
-mypy
+pre-commit
 python-lsp-server
-pyupgrade
 virtualenv
-yamllint
