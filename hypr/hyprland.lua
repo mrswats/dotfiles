@@ -52,9 +52,9 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
     general = {
         gaps_in = 5,
-        gaps_out = 5,
+        gaps_out = 10,
 
-        border_size = 2,
+        border_size = 3,
 
         col = {
             active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
